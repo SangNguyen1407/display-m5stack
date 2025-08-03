@@ -1,16 +1,18 @@
 #include <Arduino.h>
-// #include <M5Core2.h>
-#include <Home.h>
+#include "Home.h"
+#include "AppController.h"
+
+AppController app;
 
 void setup() {
   M5.begin();
   M5.Lcd.setTextFont(&fonts::efontJA_16);
-  
-  Home home;
-  home.show();
+
 }
 
 void loop() {
   M5.update();
+  app.run();
+  
   delay(5000);
 }

@@ -2,7 +2,6 @@
 #define HOME_H
 
 #include <Arduino.h>
-// #include <M5Core2.h>
 #include <M5Unified.h>
 #include <MyButton.h>
 
@@ -26,11 +25,8 @@ class Home {
         
         void drawPage();
         void setupButtons();
-        
-        // void drawOrderedItems();
-        // bool fetchOrderHistory();
 
-        int nextPage; 
+        int currentPage; 
 };
 
 #endif
